@@ -2,6 +2,8 @@ import React from 'react';
 import './Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+import Checkout from '../Checkout/Checkout';
 
 const Cart = ({cart,handleClearCart}) => {
    
@@ -36,6 +38,7 @@ const Cart = ({cart,handleClearCart}) => {
                     <span>Clear Cart</span> 
                     <FontAwesomeIcon icon={faTrashAlt}/>
                     </button>
+                    <Link to="/checkout"><button className='btn-clear-cart'>Checkout</button></Link>
         </div>
     );
 };
